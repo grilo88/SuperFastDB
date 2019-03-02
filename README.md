@@ -1,39 +1,40 @@
 # SuperFastDB
 Super fast database designed for bigdata that uses processing mechanisms like CPU, GPU and Hybrid.
-Banco de dados super r·pido projetado para bigdata que utiliza mecanismos de processamentos como CPU, GPU e HÌbrido.
+Banco de dados super r√°pido projetado para bigdata que utiliza mecanismos de processamentos como CPU, GPU e H√≠brido.
 
-Portuguese language (LÌngua Portuguesa): 
-	Este projeto È um protÛtipo, ou seja, um conceito daquilo que servir· de base para transform·-lo em uma vers„o beta. No entanto, o objetivo È lanÁar este simplificado conceito com recursos extremamente limitados para n„o tardar o seu lanÁamento.
-	O contribuidor deve ter em mente que este projeto È altamente baseado em processamento paralelo devido as implementaÁıes futuras que temos em mente com processadores gr·ficos, a GPU, mas que tambÈm possa ser configurado para trabalhar em modo sequencial definido por um arquivo de configuraÁ„o.
+Portuguese-Brazilian (Portugu√™s-Brasileiro):
+Este projeto √© um prot√≥tipo, ou seja, um conceito daquilo que servir√° de base para transform√°-lo em uma vers√£o beta. No entanto, o objetivo √© lan√ßar este simplificado conceito com recursos extremamente limitados para n√£o tardar o seu lan√ßamento.
 
-	Tendo em mente que nosso objetivo È processamento de dados com bigdata, È terminantemente proibido:
-		O uso de tÈcnicas recursivas devido o pÈssimo desempenho e alto consumo de memÛria pois elas s„o alocadas em pilhas (stack). O processamento sequencial, linha por linha, È indiscutivelmente mais r·pido.
-		O uso excessivo de mÈtodos deve ser altamente reconsiderado pois tambÈm afeta o desempenho.
+O contribuidor deve ter em mente que este projeto √© altamente baseado em processamento paralelo devido as implementa√ß√µes futuras que temos em mente com processadores gr√°ficos, a GPU, mas que tamb√©m possa ser configurado para trabalhar em modo sequencial definido por um arquivo de configura√ß√£o.
+
+Tendo em mente que nosso objetivo √© processamento de dados com bigdata, √© terminantemente proibido:
+O uso de t√©cnicas recursivas devido o p√©ssimo desempenho e alto consumo de mem√≥ria pois elas s√£o alocadas em pilhas (stack). O processamento sequencial, linha por linha, √© indiscutivelmente mais r√°pido.
+O uso excessivo de m√©todos deve ser altamente reconsiderado pois tamb√©m afeta o desempenho.
 		
-	Para atingirmos os mais altos nÌveis de desempenho e estar a frente de todos os outros bancos de dados È necess·rio ter uma mentalidade voltada para a programaÁ„o estruturada do que orientada a objetos, apesar de fazermos o uso dos dois paradigmas deixando a orientada a objetos em ˙ltimo caso quando n„o tiver alternativas.
-	Enxugar os bits È o segredo para manter um excelente desempenho. 
+Para atingirmos o melhor desempenho e estar sempre a frente de outros bancos de dados √© necess√°rio ter uma mentalidade voltada para a programa√ß√£o estruturada do que orientada a objetos, apesar de fazermos o uso dos dois paradigmas, deixando a orientada a objetos sempre em √∫ltimo caso quando n√£o h√° alternativas.
+
+O segredo para manter o excelente desempenho se chama: enxugar os bits 
 	
-	Para tornar f·cil o entendimento do cÛdigo escrito e colaborar com os demais contribuidores para que possam dar 
-	continuidade as implementaÁıes sem dificuldades, documente todos os seus mÈtodos, funÁıes e cada linha do seu cÛdigo, mesmo que vocÍ considere ser evidentemente f·cil de compreender.
+Para tornar f√°cil o entendimento do c√≥digo escrito e colaborar com os demais contribuidores para que possam dar 
+continuidade √†s implementa√ß√µes sem dificuldades, documente todos os seus m√©todos, fun√ß√µes e cada linha do seu c√≥digo, mesmo que voc√™ considere ser evidentemente f√°cil de entender.
 	
-	Neste protÛtipo dever· ser codificado as seguintes solicitaÁıes SQL:
+Neste prot√≥tipo dever√° ser codificado as seguintes solicita√ß√µes SQL:
 
-	SELECT [Express„o];
-	SELECT [Express„o] AS [NomeColunaResultado];
-	SELECT [Express„o] FROM [Banco].[Tabela];
-	SELECT [Express„o] FROM [Banco].[Tabela] WHERE [Express„o];
+SELECT [Express√£o];
+SELECT [Express√£o] AS [NomeColunaResultado];
+SELECT [Express√£o] FROM [Banco].[Tabela];
+SELECT [Express√£o] FROM [Banco].[Tabela] WHERE [Express√£o];
 
-	Onde [Express„o], de modo geral, dever· ter a capacidade de realizar operaÁıes aritmÈticas, condicionais, atribuiÁıes e , sempre respeitando a precedÍncia dos operadores praticadas pelos bancos de dados.
+Onde [Express√£o], de modo geral, dever√° ter a capacidade de realizar opera√ß√µes aritm√©ticas, condicionais, atribui√ß√µes e , sempre respeitando a preced√™ncia dos operadores praticadas pelos bancos de dados.
 
-	Artigos relacionados a este assunto:
-	https://pt.wikipedia.org/wiki/Express%C3%A3o_(computa%C3%A7%C3%A3o)
-	https://pt.wikipedia.org/wiki/Atribui%C3%A7%C3%A3o_(computa%C3%A7%C3%A3o)
+Artigos relacionados a este assunto:
+https://pt.wikipedia.org/wiki/Express%C3%A3o_(computa%C3%A7%C3%A3o)
+https://pt.wikipedia.org/wiki/Atribui%C3%A7%C3%A3o_(computa%C3%A7%C3%A3o)
 
-	http://www.vision.ime.usp.br/~pmiranda/mac122_2s14/aulas/aula13/aula13.html
-	https://www.ime.usp.br/~pf/mac0122-2002/aulas/stacks.html
+http://www.vision.ime.usp.br/~pmiranda/mac122_2s14/aulas/aula13/aula13.html
+https://www.ime.usp.br/~pf/mac0122-2002/aulas/stacks.html
 
-	A [Express„o] dever· permitir a entrada de valores a partir de vari·veis '@var' presentes no escopo do comando sql vindo de cima.
-	A [Express„o] dever· permitir uso de funÁıes como MAX(), MIN(), COALESCE,
+A [Express√£o] dever√° permitir a entrada de valores a partir de vari√°veis '@var' presentes no escopo do comando sql vindo de cima.
+A [Express√£o] dever√° permitir uso de fun√ß√µes como MAX(), MIN(), COALESCE,
 
-
-	Onde [E
+Onde [E
