@@ -17,6 +17,6 @@ namespace SuperFastDB_Setup
             InitializeComponent();
         }
 
-        // TODO: Falta implementar o Setup do SuperFastDB
+        // TODO: Implementar o Setup do SuperFastDB Server, Management e Connector para CSharp
     }
 }

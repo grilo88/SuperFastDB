@@ -26,6 +26,8 @@ namespace SuperFastDB_Server
         /// <param name="args">Dados passados pelo comando de início.</param>
         protected override void OnStart(string[] args)
         {
+            // TODO: Implementar o serviço Servidor com suporte a PipeNamed, TCP/IP e UDP
+
             base.OnStart(args);
         }
 
@@ -87,23 +89,23 @@ namespace SuperFastDB_Server
         {
             switch (powerStatus)
             {
-                case PowerBroadcastStatus.BatteryLow:
+                case PowerBroadcastStatus.BatteryLow:           // A bateria está fraca
                     break;
-                case PowerBroadcastStatus.OemEvent:
+                case PowerBroadcastStatus.OemEvent:             // Evento de OEM
                     break;
-                case PowerBroadcastStatus.PowerStatusChange:
+                case PowerBroadcastStatus.PowerStatusChange:    // Mudança de status da bateria
                     break;
-                case PowerBroadcastStatus.QuerySuspend:
+                case PowerBroadcastStatus.QuerySuspend:         // Permissão para suspender o computador
                     break;
-                case PowerBroadcastStatus.QuerySuspendFailed:
+                case PowerBroadcastStatus.QuerySuspendFailed:   // O sistema não obteve permissão para suspender o computador
                     break;
-                case PowerBroadcastStatus.ResumeAutomatic:
+                case PowerBroadcastStatus.ResumeAutomatic:      // O computador foi ativado automaticamente para lidar com um evento
                     break;
-                case PowerBroadcastStatus.ResumeCritical:
+                case PowerBroadcastStatus.ResumeCritical:       // O sistema retomou a operação após uma suspensão crítica causada por uma bateria com falha
                     break;
-                case PowerBroadcastStatus.ResumeSuspend:
+                case PowerBroadcastStatus.ResumeSuspend:        // O sistema retomou a operação após ter sido suspenso
                     break;
-                case PowerBroadcastStatus.Suspend:
+                case PowerBroadcastStatus.Suspend:              // O computador está prestes a entrar no modo suspenso
                     break;
                 default:
                     break;
@@ -114,7 +116,7 @@ namespace SuperFastDB_Server
 
         /// <summary>
         /// Executa quando um evento de alteração é proveniente de uma sessão do servidor
-        ///     Host da Sessão da Área de Trabalho Remota.
+        /// Host da Sessão da Área de Trabalho Remota.
         /// </summary>
         /// <param name="changeDescription">Uma estrutura que identifica o tipo de alteração.</param>
         protected override void OnSessionChange(SessionChangeDescription changeDescription)
