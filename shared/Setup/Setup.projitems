@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>b31ab1e3-4b31-492b-a880-9efe1cf334df</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Setup</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
