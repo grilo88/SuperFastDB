@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security.Principal;
 using System.Text;
 
 namespace SuperFastDB
@@ -8,7 +9,37 @@ namespace SuperFastDB
     {
         public Setup()
         {
-            // Construtor do Setup
+        }
+
+        /// <summary>
+        /// Checa se está rodando como Administrador
+        /// </summary>
+        /// <returns></returns>
+        public static bool IsAdministrator()
+        {
+            using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
+            {
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+                return principal.IsInRole(WindowsBuiltInRole.Administrator);
+            }
+        }
+
+        /// <summary>
+        /// Instala o serviço.
+        /// </summary>
+        /// <param name="exePath">Caminho do arquivo executável</param>
+        public void InstalarServico(string exePath)
+        {
+            SelfInstaller.Install(exePath);
+        }
+
+        /// <summary>
+        /// Desinstala o serviço.
+        /// </summary>
+        /// <param name="exePath">Caminho do arquivo executável</param>
+        public void DesinstalarServico(string exePath)
+        {
+            SelfInstaller.Uninstall(exePath);
         }
 
         // TODO: ?
