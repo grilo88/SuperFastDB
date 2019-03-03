@@ -7,11 +7,14 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
+using SuperFastDB;
 
 namespace SuperFastDB_Server
 {
     public partial class Service : ServiceBase
     {
+        ServerService server; // Objeto do Serviço
+
         public Service()
         {
             InitializeComponent();
@@ -26,9 +29,15 @@ namespace SuperFastDB_Server
         /// <param name="args">Dados passados pelo comando de início.</param>
         protected override void OnStart(string[] args)
         {
-            // TODO: Implementar o serviço Servidor com suporte a PipeNamed, TCP/IP e UDP
+            // Primeira execução?
+            if (server == null)
+            {
+                server = new ServerService(); // Instancia o Serviço do Servidor
+            }
 
-            base.OnStart(args);
+            server.StartServer(); // Inicializa o Servidor
+
+            base.OnStart(args); // Executa o método base
         }
 
         /// <summary>
@@ -38,7 +47,9 @@ namespace SuperFastDB_Server
         /// </summary>
         protected override void OnStop()
         {
-            base.OnStop();
+            server.StopServer();
+
+            base.OnStop(); // Executa o método base
         }
 
         /// <summary>
@@ -49,7 +60,9 @@ namespace SuperFastDB_Server
         /// </summary>
         protected override void OnContinue()
         {
-            base.OnContinue();
+            server.StartServer();
+
+            base.OnContinue(); // Executa o método base
         }
 
         /// <summary>
@@ -71,7 +84,9 @@ namespace SuperFastDB_Server
         /// </summary>
         protected override void OnPause()
         {
-            base.OnPause();
+            server.StopServer();
+
+            base.OnPause(); // Executa o método base
         }
 
         /// <summary>
@@ -90,28 +105,37 @@ namespace SuperFastDB_Server
             switch (powerStatus)
             {
                 case PowerBroadcastStatus.BatteryLow:           // A bateria está fraca
+                    // TODO: Implementar case "A bateria está fraca"
                     break;
                 case PowerBroadcastStatus.OemEvent:             // Evento de OEM
+                    // TODO: Implementar case "Evento OEM"
                     break;
                 case PowerBroadcastStatus.PowerStatusChange:    // Mudança de status da bateria
+                    // TODO: Implementar case "Mudança de status da bateria"
                     break;
                 case PowerBroadcastStatus.QuerySuspend:         // Permissão para suspender o computador
+                    // TODO: Implementar case "Permissão para suspender o computador"
                     break;
                 case PowerBroadcastStatus.QuerySuspendFailed:   // O sistema não obteve permissão para suspender o computador
+                    // TODO: Implementar case "O sistema não obteve permissão para suspender o computador"
                     break;
                 case PowerBroadcastStatus.ResumeAutomatic:      // O computador foi ativado automaticamente para lidar com um evento
+                    // TODO: Implementar case "O computador foi ativado automaticamente para lidar com um evento"
                     break;
                 case PowerBroadcastStatus.ResumeCritical:       // O sistema retomou a operação após uma suspensão crítica causada por uma bateria com falha
+                    // TODO: Implementar case "O sistema retomou a operação após uma suspensão crítica causada por uma bateria com falha"
                     break;
                 case PowerBroadcastStatus.ResumeSuspend:        // O sistema retomou a operação após ter sido suspenso
+                    // TODO: Implementar case "O sistema retomou a operação após ter sido suspenso"
                     break;
                 case PowerBroadcastStatus.Suspend:              // O computador está prestes a entrar no modo suspenso
+                    // TODO: Implementar case "O computador está prestes a entrar no modo suspenso"
                     break;
                 default:
                     break;
             }
 
-            return base.OnPowerEvent(powerStatus);
+            return base.OnPowerEvent(powerStatus); // Executa método base
         }
 
         /// <summary>
@@ -124,28 +148,37 @@ namespace SuperFastDB_Server
             switch (changeDescription.Reason)
             {
                 case SessionChangeReason.ConsoleConnect:        // Uma sessão do console foi conectada.
+                    // TODO: Implementar case "Uma sessão do console foi conectada."
                     break;
                 case SessionChangeReason.ConsoleDisconnect:     // Uma sessão do console foi desconectada.
+                    // TODO: Implementar case "Uma sessão do console foi desconectada."
                     break;
                 case SessionChangeReason.RemoteConnect:         // Uma sessão remota foi conectada.
+                    // TODO: Implementar case "Uma sessão remota foi conectada."
                     break;
                 case SessionChangeReason.RemoteDisconnect:      // Uma sessão remota foi desconectada.
+                    // TODO: Implementar case "Uma sessão remota foi desconectada."
                     break;
                 case SessionChangeReason.SessionLogon:          // Um usuário fez logon em uma sessão.
+                    // TODO: Implementar case "Um usuário fez logon em uma sessão."
                     break;
                 case SessionChangeReason.SessionLogoff:         // Um usuário fez logoff em uma sessão.
+                    // TODO: Implementar case "Um usuário fez logoff em uma sessão."
                     break;
                 case SessionChangeReason.SessionLock:           // A sessão foi bloqueada.
+                    // TODO: Implementar case "A sessão foi bloqueada."
                     break;
-                case SessionChangeReason.SessionUnlock:         // a sessão foi desbloqueada.
+                case SessionChangeReason.SessionUnlock:         // A sessão foi desbloqueada.
+                    // TODO: Implementar case "A sessão foi desbloqueada."
                     break;
-                case SessionChangeReason.SessionRemoteControl:  // o status de controle remoto de uma sessão foi alterado.
+                case SessionChangeReason.SessionRemoteControl:  // O status de controle remoto de uma sessão foi alterado.
+                    // TODO: Implementar case "O status de controle remoto de uma sessão foi alterado."
                     break;
                 default:
                     break;
             }
 
-            base.OnSessionChange(changeDescription);
+            base.OnSessionChange(changeDescription); // Executa método base
         }
 
         /// <summary>
@@ -154,7 +187,11 @@ namespace SuperFastDB_Server
         /// </summary>
         protected override void OnShutdown()
         {
-            base.OnShutdown();
+            server.StopServer();    // Pára o Servidor
+
+            server.CloseServer();   // Encerra o servidor
+
+            base.OnShutdown(); // Executa o método base
         }
     }
 }

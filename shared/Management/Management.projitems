@@ -6,8 +6,9 @@
     <SharedGUID>5be7403a-e5ca-4bba-9d46-26f3cf0eb5fb</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Management</Import_RootNamespace>
+    <Import_RootNamespace>SuperFastDB</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Management.cs" />
   </ItemGroup>
 </Project>

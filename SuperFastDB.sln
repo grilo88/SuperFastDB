@@ -5,13 +5,13 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{88E9D87C-B48D-4115-AE43-B7583259AA64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB_ConnectorCSharp", "src\SuperFastDB_ConnectorCSharp\SuperFastDB_ConnectorCSharp.csproj", "{E843D187-E7FB-44FD-B1BB-7112C69AB1B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB.ConnectorCSharp", "src\SuperFastDB_ConnectorCSharp\SuperFastDB.ConnectorCSharp.csproj", "{E843D187-E7FB-44FD-B1BB-7112C69AB1B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB_Setup", "src\SuperFastDB_Setup\SuperFastDB_Setup.csproj", "{4E5C03E4-6535-4B19-A5B9-7B42610CDCBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB_Server", "src\SuperFastDB_Server\SuperFastDB_Server.csproj", "{22416D78-35E4-4F4C-A2E0-038FF9949589}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB.Server", "src\SuperFastDB_Server\SuperFastDB.Server.csproj", "{22416D78-35E4-4F4C-A2E0-038FF9949589}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB_Management", "src\SuperFastDB_Management\SuperFastDB_Management.csproj", "{1E9E13B1-2FB2-485B-B2BD-770F81F4D7E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB.Management", "src\SuperFastDB_Management\SuperFastDB.Management.csproj", "{1E9E13B1-2FB2-485B-B2BD-770F81F4D7E2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{D085266D-E28C-4C7F-99DB-20D13BF97BB0}"
 EndProject
@@ -23,12 +23,36 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Server", "shared\Server\Ser
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Setup", "shared\Setup\Setup.shproj", "{B31AB1E3-4B31-492B-A880-9EFE1CF334DF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1A104273-28D8-47A0-AF9F-7CCF4C743C7F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTests", "tests\ServerTests\ServerTests.csproj", "{882B1362-CAD7-4C6D-BA1B-7EB73180166D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0F9FF0FB-B90A-4372-8640-B95A316B19FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagementTests", "tests\ManagementTests\ManagementTests.csproj", "{D91FF0F9-3907-4D38-99D6-04B5DDE3FD56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectorCSharpTests", "tests\ConnectorCSharpTests\ConnectorCSharpTests.csproj", "{1D077607-D587-466C-ADC3-BD52D3C22735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetupTests", "tests\SetupTests\SetupTests.csproj", "{540111E8-23C5-4E0A-9050-F55EC048441D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		shared\Server\Server.projitems*{03f2cfdd-5bfa-4e64-bb63-c630eebe4104}*SharedItemsImports = 13
+		shared\ConnectorCSharp\ConnectorCSharp.projitems*{1d077607-d587-466c-adc3-bd52d3c22735}*SharedItemsImports = 4
+		shared\Management\Management.projitems*{1e9e13b1-2fb2-485b-b2bd-770f81f4d7e2}*SharedItemsImports = 4
+		shared\Server\Server.projitems*{22416d78-35e4-4f4c-a2e0-038ff9949589}*SharedItemsImports = 4
 		shared\ConnectorCSharp\ConnectorCSharp.projitems*{2d5d42b2-32aa-42a4-b96b-91e58dd1aa5b}*SharedItemsImports = 13
+		shared\Setup\Setup.projitems*{4e5c03e4-6535-4b19-a5b9-7b42610cdcbb}*SharedItemsImports = 4
+		shared\Setup\Setup.projitems*{540111e8-23c5-4e0a-9050-f55ec048441d}*SharedItemsImports = 4
 		shared\Management\Management.projitems*{5be7403a-e5ca-4bba-9d46-26f3cf0eb5fb}*SharedItemsImports = 13
+		shared\Server\Server.projitems*{882b1362-cad7-4c6d-ba1b-7eb73180166d}*SharedItemsImports = 4
 		shared\Setup\Setup.projitems*{b31ab1e3-4b31-492b-a880-9efe1cf334df}*SharedItemsImports = 13
+		shared\Management\Management.projitems*{d91ff0f9-3907-4d38-99d6-04b5dde3fd56}*SharedItemsImports = 4
+		shared\ConnectorCSharp\ConnectorCSharp.projitems*{e843d187-e7fb-44fd-b1bb-7112c69ab1b9}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +75,22 @@ Global
 		{1E9E13B1-2FB2-485B-B2BD-770F81F4D7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E9E13B1-2FB2-485B-B2BD-770F81F4D7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E9E13B1-2FB2-485B-B2BD-770F81F4D7E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{882B1362-CAD7-4C6D-BA1B-7EB73180166D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882B1362-CAD7-4C6D-BA1B-7EB73180166D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882B1362-CAD7-4C6D-BA1B-7EB73180166D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882B1362-CAD7-4C6D-BA1B-7EB73180166D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91FF0F9-3907-4D38-99D6-04B5DDE3FD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91FF0F9-3907-4D38-99D6-04B5DDE3FD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91FF0F9-3907-4D38-99D6-04B5DDE3FD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91FF0F9-3907-4D38-99D6-04B5DDE3FD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D077607-D587-466C-ADC3-BD52D3C22735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D077607-D587-466C-ADC3-BD52D3C22735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D077607-D587-466C-ADC3-BD52D3C22735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D077607-D587-466C-ADC3-BD52D3C22735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540111E8-23C5-4E0A-9050-F55EC048441D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540111E8-23C5-4E0A-9050-F55EC048441D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540111E8-23C5-4E0A-9050-F55EC048441D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540111E8-23C5-4E0A-9050-F55EC048441D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +104,10 @@ Global
 		{5BE7403A-E5CA-4BBA-9D46-26F3CF0EB5FB} = {D085266D-E28C-4C7F-99DB-20D13BF97BB0}
 		{03F2CFDD-5BFA-4E64-BB63-C630EEBE4104} = {D085266D-E28C-4C7F-99DB-20D13BF97BB0}
 		{B31AB1E3-4B31-492B-A880-9EFE1CF334DF} = {D085266D-E28C-4C7F-99DB-20D13BF97BB0}
+		{882B1362-CAD7-4C6D-BA1B-7EB73180166D} = {0F9FF0FB-B90A-4372-8640-B95A316B19FA}
+		{D91FF0F9-3907-4D38-99D6-04B5DDE3FD56} = {0F9FF0FB-B90A-4372-8640-B95A316B19FA}
+		{1D077607-D587-466C-ADC3-BD52D3C22735} = {0F9FF0FB-B90A-4372-8640-B95A316B19FA}
+		{540111E8-23C5-4E0A-9050-F55EC048441D} = {0F9FF0FB-B90A-4372-8640-B95A316B19FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D33B432-22A4-4A5C-8D39-ABEF3571804A}

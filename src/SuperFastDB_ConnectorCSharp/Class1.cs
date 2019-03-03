@@ -8,6 +8,6 @@ namespace SuperFastDBConnectorCSharp
 {
     public class Class1
     {
-        // TODO: Implementar o Conector do C#
+        // TODO: Implementar o Conector para o C#
     }
 }

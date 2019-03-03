@@ -6,8 +6,9 @@
     <SharedGUID>2d5d42b2-32aa-42a4-b96b-91e58dd1aa5b</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>ConnectorCSharp</Import_RootNamespace>
+    <Import_RootNamespace>SuperFastDB</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Connector.cs" />
   </ItemGroup>
 </Project>

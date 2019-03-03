@@ -6,8 +6,9 @@
     <SharedGUID>b31ab1e3-4b31-492b-a880-9efe1cf334df</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Setup</Import_RootNamespace>
+    <Import_RootNamespace>SuperFastDB</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Setup.cs" />
   </ItemGroup>
 </Project>
