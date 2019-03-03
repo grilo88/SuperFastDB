@@ -1,0 +1,12 @@
+Os contribuidores devem focar na codificação dos projetos 'shared' do core.
+É aqui onde todo o código do núcleo fica centralizado e distribuído para todos os outros projetos.
+
+Quando recompilar a Solução, o seu código será posto a prova em todas as plataformas e projetos.
+
+Sempre recompile a solução inteira ao invés de compilar apenas um projeto específico, 
+assim você saberá se seu código beneficou ou prejudicou todos os demais projetos.
+
+Jamais adicione referências diretas a partir do caminho de arquivo, mas sim do próprio ambiente 
+de desenvolvimento ou via nuget. Soluções do Visual Studio costumam dar muitos problemas 
+quando as referências são feitas diretamente no caminho do arquivo prejudicando assim o uso
+da opção Rebuild Solution (Recompilar Solução) e gerando diversos conflitos e dor de cabeça.
