@@ -31,6 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <Import Project="..\..\..\core\symbols.targets" />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
@@ -73,9 +74,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\core\assemblies\setup.forms.x86.net45\setup.forms.x86.net45.csproj">
-      <Project>{d99e08d9-b1ea-4c09-8682-9687820f7ae3}</Project>
-      <Name>setup.forms.x86.net45</Name>
+    <ProjectReference Include="..\..\..\core\assemblies\setup.forms.x64.net45\setup.forms.x64.net45.csproj">
+      <Project>{752a5f45-0bf2-4125-99f0-6c9bb8f71db7}</Project>
+      <Name>setup.forms.x64.net45</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\core\assemblies\setup.x64.net45\setup.x64.net45.csproj">
       <Project>{99c2a359-f685-43a7-b029-5640c1b601ae}</Project>

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 // Neste caso estamos usando x86 só para o uso do forms
-using setupforms = setup_forms_x86_net45;
+using setupforms = setup_forms_x64_net45;
 
 namespace SuperFastDB_Setup
 {

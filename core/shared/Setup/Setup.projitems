@@ -9,7 +9,6 @@
     <Import_RootNamespace>SuperFastDB</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Installer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SelfInstaller.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Setup.cs" />
   </ItemGroup>

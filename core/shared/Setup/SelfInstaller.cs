@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-#if NET45
+
+#if x86
 using System.Configuration.Install;
 #endif
+
 using System.Reflection;
 using System.Text;
 
@@ -14,7 +16,7 @@ namespace SuperFastDB
         /// <param name="exePath">Caminho do arquivo executável</param>
         public static void Install(string exePath)
         {
-#if NET45
+#if x86
             ManagedInstallerClass.InstallHelper(new string[] { exePath });
 #else
             throw new NotImplementedException();
@@ -25,7 +27,7 @@ namespace SuperFastDB
         /// <param name="exePath">Caminho do arquivo executável</param>
         public static void Uninstall(string exePath)
         {
-#if NET45
+#if x86
             ManagedInstallerClass.InstallHelper(new string[] { "/u", exePath });
 #else
             throw new NotImplementedException();

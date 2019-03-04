@@ -17,15 +17,11 @@ namespace SuperFastDB
         /// <returns></returns>
         public static bool IsAdministrator()
         {
-#if NET45
             using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
             {
                 WindowsPrincipal principal = new WindowsPrincipal(identity);
                 return principal.IsInRole(WindowsBuiltInRole.Administrator);
             }
-#else
-            throw new NotImplementedException();
-#endif
         }
 
         /// <summary>

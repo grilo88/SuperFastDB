@@ -2,7 +2,7 @@ Não adicione classes nos projetos assemblies. Esse projetos existem por razão de
 
 As diretivas usadas são:
 
-NET45
-NETSTANDARD2_0
+NET20, NET35, NET40, NET45		(Definidos Automaticamente)
+x86, x64 nos projetos setup.x*	(Fixos)
 
-Ao adicionar novas plataformas favor incluir a(s) nova(s) diretiva(s) na lista acima.
+Exceto projetos NETStandard.

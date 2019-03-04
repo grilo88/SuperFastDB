@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <FrameworkNumber>$(TargetFrameworkVersion.Replace("v", "").Replace(".", ""))</FrameworkNumber>
+    <DefineConstants Condition=" !$(DefineConstants.Contains(';NET')) ">$(DefineConstants);$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", ""))</DefineConstants>
+    <Framework Condition=" '$(Framework)' == '' ">$(TargetFrameworkVersion.Replace("v", "NET").Replace(".", "_"))</Framework>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 20 ">$(DefineConstants),NET20</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 35 ">$(DefineConstants),NET35</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 40 ">$(DefineConstants),NET40</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 45 ">$(DefineConstants),NET45</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 451 ">$(DefineConstants),NET451</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 452 ">$(DefineConstants),NET452</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 46 ">$(DefineConstants),NET46</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 461 ">$(DefineConstants),NET461</DefineConstants>
+    <DefineConstants Condition=" $(FrameworkNumber) &gt; 472 ">$(DefineConstants),NET472</DefineConstants>
+  </PropertyGroup>
+</Project>
