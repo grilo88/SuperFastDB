@@ -107,6 +107,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB.Server.x86.net4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperFastDB.ConnectorCSharp.x86.netstandard", "src\SuperFastDB.x86.NETStandard\SuperFastDB.ConnectorCSharp\SuperFastDB.ConnectorCSharp.x86.netstandard.csproj", "{A23684C7-8FC2-41C9-8345-349A1BDC1A3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "setup.forms.x64.net45", "core\assemblies\setup.forms.x64.net45\setup.forms.x64.net45.csproj", "{752A5F45-0BF2-4125-99F0-6C9BB8F71DB7}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		core\shared\Server\Server.projitems*{03f2cfdd-5bfa-4e64-bb63-c630eebe4104}*SharedItemsImports = 13
@@ -251,6 +253,10 @@ Global
 		{A23684C7-8FC2-41C9-8345-349A1BDC1A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A23684C7-8FC2-41C9-8345-349A1BDC1A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A23684C7-8FC2-41C9-8345-349A1BDC1A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752A5F45-0BF2-4125-99F0-6C9BB8F71DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752A5F45-0BF2-4125-99F0-6C9BB8F71DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752A5F45-0BF2-4125-99F0-6C9BB8F71DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752A5F45-0BF2-4125-99F0-6C9BB8F71DB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -299,6 +305,7 @@ Global
 		{C55AB23C-C2FD-46DD-8C19-1BCE5C6EDB07} = {B912829A-B76C-43CD-B471-5325CB4F93B9}
 		{C0597568-DDD3-46A5-AA5C-BD57F00447B1} = {B912829A-B76C-43CD-B471-5325CB4F93B9}
 		{A23684C7-8FC2-41C9-8345-349A1BDC1A3C} = {9A5A0D15-3AED-4A90-9785-8F36343EFAF7}
+		{752A5F45-0BF2-4125-99F0-6C9BB8F71DB7} = {1EF1BCFF-E928-4C8C-BEE6-B4B72C28528B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D33B432-22A4-4A5C-8D39-ABEF3571804A}
