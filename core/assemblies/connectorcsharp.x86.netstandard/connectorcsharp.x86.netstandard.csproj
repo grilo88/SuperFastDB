@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>connectorcsharp_x86_netstandard</RootNamespace>
+    <RootNamespace>SuperFastDB</RootNamespace>
     <AssemblyName>connectorcsharp.x86.netstandard</AssemblyName>
   </PropertyGroup>
 

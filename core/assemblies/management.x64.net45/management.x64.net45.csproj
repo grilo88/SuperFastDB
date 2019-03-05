@@ -7,7 +7,7 @@
     <ProjectGuid>{73A45696-068F-4270-9F12-480EE334B660}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>management_x64_net45</RootNamespace>
+    <RootNamespace>SuperFastDB</RootNamespace>
     <AssemblyName>management.x64.net45</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

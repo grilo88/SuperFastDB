@@ -6,9 +6,11 @@
     <SharedGUID>03f2cfdd-5bfa-4e64-bb63-c630eebe4104</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>SuperFastDB</Import_RootNamespace>
+    <Import_RootNamespace>SuperFastDB.Server</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Console.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Program.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Server.cs" />
   </ItemGroup>
 </Project>

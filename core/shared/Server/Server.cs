@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SuperFastDB
+namespace SuperFastDB.Server
 {
-    public class ServerService : IDisposable
+    public partial class Instance : IDisposable
     {
-        public ServerService()
+        public Instance()
         {
             // TODO: Construtor do ServerService
         }

@@ -7,7 +7,7 @@
     <ProjectGuid>{752A5F45-0BF2-4125-99F0-6C9BB8F71DB7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>setup_forms_x64_net45</RootNamespace>
+    <RootNamespace>SuperFastDB</RootNamespace>
     <AssemblyName>setup.forms.x64.net45</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SuperFastDB
+namespace SuperFastDB.Management
 {
     public class Management
     {

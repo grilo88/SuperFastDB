@@ -6,9 +6,13 @@
     <SharedGUID>2d5d42b2-32aa-42a4-b96b-91e58dd1aa5b</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>SuperFastDB</Import_RootNamespace>
+    <Import_RootNamespace>SuperFastDB.Data</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Connector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Command.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Connection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Transaction.cs" />
   </ItemGroup>
 </Project>
