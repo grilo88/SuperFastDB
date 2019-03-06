@@ -2,11 +2,11 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("SuperFastDB.Setup_x64.NET45")]
+[assembly: AssemblyTitle("SuperFastDB.Setup_x64NET45")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SuperFastDB.Setup_x64.NET45")]
+[assembly: AssemblyProduct("SuperFastDB.Setup_x64NET45")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

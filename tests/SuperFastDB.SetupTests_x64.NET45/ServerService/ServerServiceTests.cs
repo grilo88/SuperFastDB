@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace SuperFastDB.Setup_x64.NET45
+namespace SuperFastDB.Setup_x64NET45
 {
     [TestClass]
     public class ServerServiceTests
