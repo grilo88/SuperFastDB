@@ -101,6 +101,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDB.ConnectorCSharp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "units", "units", "{8DEF7A7D-2595-4DF8-B5D4-67E877400FE3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{842B4BF1-C43F-4AC0-907F-D9F048FE925A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFastDemo", "demo\demo1\SuperFastDemo.csproj", "{3C9F8249-8DDC-49AF-840D-417F8876FD67}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		core\shared\Server\Server.projitems*{03f2cfdd-5bfa-4e64-bb63-c630eebe4104}*SharedItemsImports = 13
@@ -238,6 +242,10 @@ Global
 		{824BBED8-279A-492E-B198-F36BA31AC7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{824BBED8-279A-492E-B198-F36BA31AC7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{824BBED8-279A-492E-B198-F36BA31AC7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9F8249-8DDC-49AF-840D-417F8876FD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9F8249-8DDC-49AF-840D-417F8876FD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9F8249-8DDC-49AF-840D-417F8876FD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9F8249-8DDC-49AF-840D-417F8876FD67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -283,6 +291,7 @@ Global
 		{DC652ACC-81D6-424A-9C6B-A08E87C17568} = {B14F6DCA-D84D-42C6-A4CA-8E42FA5B4714}
 		{824BBED8-279A-492E-B198-F36BA31AC7E5} = {8DEF7A7D-2595-4DF8-B5D4-67E877400FE3}
 		{8DEF7A7D-2595-4DF8-B5D4-67E877400FE3} = {0F9FF0FB-B90A-4372-8640-B95A316B19FA}
+		{3C9F8249-8DDC-49AF-840D-417F8876FD67} = {842B4BF1-C43F-4AC0-907F-D9F048FE925A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D33B432-22A4-4A5C-8D39-ABEF3571804A}

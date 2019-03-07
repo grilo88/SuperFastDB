@@ -1,0 +1,10 @@
+﻿
+
+
+
+Nunca declare variável dentro do escopo de um LOOP, sempre declare fora e apenas altere o valor dele quando necessário.
+Nunca interage com os caracteres diretamente na string, converte-a para uma Array de char de ponto flutuante usando código inseguro.
+
+Quando for checar um valor a partir de uma Array de valores não use o FOR use o IF... ELSE IF...ELSE... quantas vezes for necessário.
+
+
