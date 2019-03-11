@@ -59,7 +59,7 @@
     <Compile Include="Excecoes.cs" />
     <Compile Include="bkp_ExpressaoSql.cs" />
     <Compile Include="ExpressaoSql_bkp.cs" />
-    <Compile Include="ExpressaoSql.cs" />
+    <Compile Include="RPN.cs" />
     <Compile Include="Extensoes.cs" />
     <Compile Include="frmDemo.cs">
       <SubType>Form</SubType>

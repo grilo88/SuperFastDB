@@ -15,7 +15,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZeroFormatter;
-using static Interpretador.ExpressaoSql;
+using static Interpretador.RPN;
 
 namespace SuperFast
 {
@@ -1251,11 +1251,11 @@ namespace SuperFast
             Update();
 
             dgResultado.DataSource = null;
-            ExpressaoSql expSql = new ExpressaoSql();
+            RPN expSql = new RPN();
 
             int tick = Environment.TickCount;
-            try
-            {
+            //try
+            //{
             //Solicitar(txtSolicitar.Text);
             char[] posfixa = null;
             Queue<char[]> strings = null;
@@ -1290,13 +1290,13 @@ namespace SuperFast
 
             int tempoGasto = Environment.TickCount - tick;
                 lblStatus.Text = $"Consulta executada com sucesso em {tempoGasto.ToString("N0")} ms";
-            }
-            catch (Exception ex)
-            {
-                int tempoGasto = Environment.TickCount - tick;
-                this.Text = tempoGasto.ToString("N0") + "ms";
-                lblStatus.Text = ex.Message;
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    int tempoGasto = Environment.TickCount - tick;
+            //    this.Text = tempoGasto.ToString("N0") + "ms";
+            //    lblStatus.Text = ex.Message;
+            //}
         }
 
         Queue<Cab_Tabela> queue = new Queue<Cab_Tabela>();

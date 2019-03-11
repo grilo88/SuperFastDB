@@ -103,6 +103,8 @@
             this.txtSolicitar.Name = "txtSolicitar";
             this.txtSolicitar.Size = new System.Drawing.Size(778, 136);
             this.txtSolicitar.TabIndex = 6;
+            this.txtSolicitar.Text = "select (Select 1 as teste), (Select 2 as teste) as top FROM world.city where id >" +
+    " 0 + 1 * 4 - 10";
             // 
             // btnSolicitar
             // 
@@ -222,7 +224,7 @@
             this.btnSql7.UseVisualStyleBackColor = true;
             this.btnSql7.Click += new System.EventHandler(this.btnSql7_Click);
             // 
-            // frmAlencarDB
+            // frmDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -244,7 +246,7 @@
             this.Controls.Add(this.dgResultado);
             this.Controls.Add(this.btnCreateTable);
             this.Controls.Add(this.btnLoadData);
-            this.Name = "frmAlencarDB";
+            this.Name = "frmDemo";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgResultado)).EndInit();
