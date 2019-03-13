@@ -25,21 +25,57 @@ namespace InterpretadorSQL.Tests
             string saida = InfixaParaPosFixa("Select 1");
             Assert.AreEqual(saida, "1 SL");
 
-            // Teste inicial
-            //saida = InfixaParaPosFixa("Select --1");
-            //Assert.AreEqual(saida, "1 SL");
+            // Número zero com vários zeros
+            saida = InfixaParaPosFixa("Select 000000 0000");
+            Assert.AreEqual(saida, "0 0 SL");
+
+            // Número com zeros a esquerda
+            saida = InfixaParaPosFixa("Select 000000567800 -  00748");
+            Assert.AreEqual(saida, "567800 748 - SL");
+
+            // Número decimal com zeros a esquerda
+            saida = InfixaParaPosFixa("-00002.944");
+            Assert.AreEqual(saida, "-2.944");
+
+            // Número decimal com zeros a esquerda
+            saida = InfixaParaPosFixa("Select 000000.35678 + -00089.887");
+            Assert.AreEqual(saida, "0.35678 -89.887 + SL");
+
+            // Número negativo
+            saida = InfixaParaPosFixa("Select -1");
+            Assert.AreEqual(saida, "-1 SL");
+
+            // Número negativo com operador unário (-)
+            saida = InfixaParaPosFixa("Select --1");
+            Assert.AreEqual(saida, "--1 SL");
+
+            // Número negativo com operador unário (+)
+            saida = InfixaParaPosFixa("Select +-1");
+            Assert.AreEqual(saida, "+-1 SL");
+
+            // Número negativo com decimais
+            saida = InfixaParaPosFixa("Select -1.57865");
+            Assert.AreEqual(saida, "-1.57865 SL");
+
+            // Número negativo com decimais longos
+            saida = InfixaParaPosFixa("Select -934234.00335567775");
+            Assert.AreEqual(saida, "-934234.00335567775 SL");
 
             // Separação regular de operandos e operados 
             saida = InfixaParaPosFixa("select 5 + ((7 / 6 + 7 + (sin(2 * 2 - 8 - cos(2) - 5 * 3 + 6 / 4) * 3 + 6 - tan(34)) * 2 + 5 - 6) - 5) + 3 * 2");
             Assert.AreEqual(saida, "5 7 6 / 7 + 2 2 * 8 - 2 CO - 5 3 * - 6 4 / + SI 3 * 6 + 34 TG - 2 * + 5 + 6 - 5 - + 3 2 * + SL");
 
-            // Operandos e operadores juntos
+            // Operandos, operadores e funções juntos
             saida = InfixaParaPosFixa("select 5+((7/6+7+(sin(2*2-8-cos(2)-5*3+6/4)*3+6-tan(34))*2+5-6)-5)+3*2");
             Assert.AreEqual(saida, "5 7 6 / 7 + 2 2 * 8 - 2 CO - 5 3 * - 6 4 / + SI 3 * 6 + 34 TG - 2 * + 5 + 6 - 5 - + 3 2 * + SL");
 
             // Espaçamentos irregulares entre operandos, operadores e funções
             saida = InfixaParaPosFixa("select 5+(  (7/   6+   7+(   sin   (2*  2-   8   -   cos( 2)- 5* 3+   6/  4)*3+6-tan   (  34))*2    +5-6   )-  5)+3   *2");
             Assert.AreEqual(saida, "5 7 6 / 7 + 2 2 * 8 - 2 CO - 5 3 * - 6 4 / + SI 3 * 6 + 34 TG - 2 * + 5 + 6 - 5 - + 3 2 * + SL");
+
+            // Operandos e operadores juntos
+            saida = InfixaParaPosFixa("select 5.9+((7/6+7.000001+(sin(002.56*2-8-cos(2)-5*3+6/4)*3+6-tan(34))*2+5-6)-5)+3*2");
+            Assert.AreEqual(saida, "5.9 7 6 / 7.000001 + 2.56 2 * 8 - 2 CO - 5 3 * - 6 4 / + SI 3 * 6 + 34 TG - 2 * + 5 + 6 - 5 - + 3 2 * + SL");
         }
 
         private string InfixaParaPosFixa(string sql)

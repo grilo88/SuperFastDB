@@ -110,7 +110,7 @@ namespace InterpretadorSQL
             _capacidade_posfixa = -1;
         }
 
-        int _pos = 0;
+        int _pos = -1;
         int _inicio = -1;
         char[] _op;
 
@@ -148,6 +148,16 @@ namespace InterpretadorSQL
         public char[] InfixaParaPosfixa(char[] infix, char[] infix_u, out Queue<char[]> out_strings)
         {
             _pos = 0;
+            _isScanNum = false;
+            _isFuncao = false;
+            _isString = false;
+            _isComando = false;
+            _isVariavel = false;
+            _op_ant = false;
+            _op_ant_arit = false;
+            _op_ant_rel = false;
+            _op_ant_log = false;
+            _op_ant_vir = false;
 
             if (_capacidade_posfixa == -1)
             {
@@ -574,7 +584,7 @@ namespace InterpretadorSQL
 
                     if (_zero_esq && infix[pos] == '0')
                     {
-                        if (pos == infix.Length - 1) // Adiciona Zero no último índice
+                        if (pos == infix.Length - 1 || infix_u[pos + 1] == '.') // Adiciona Zero no último índice
                         {
                             _posFix[_pos++] = '0';
                             _zero_esq = false;
@@ -601,7 +611,10 @@ namespace InterpretadorSQL
                             _posFix[_pos++] = '0';
                             _zero_esq = false;
                         }
-                        _posFix[_pos++] = ' ';
+
+                        if (_pos > 0) // Este If evita incluir ' ' na posição 0
+                            _posFix[_pos++] = ' ';
+
                         _isScanNum = false;
                     }
                     #endregion
@@ -706,21 +719,29 @@ namespace InterpretadorSQL
                     #region Operador -
                     else
                     {
-                        _ch_op_ant = new char[1];
-                        _ch_op_ant[0] = '-';
+                        //if (infix[pos + 1] == '0')
+                        //{
+                        //    _posFix[_pos++] = '-';
+                        //    _isScanNum = true;
+                        //}
+                        //else
+                        //{
+                            _ch_op_ant = new char[1];
+                            _ch_op_ant[0] = '-';
 
-                        _op_ant = true;
-                        _op_ant_arit = true;
-                        while (_pilha_Op.Count > 0 &&
-                            _pilha_Op.Peek()[2] != '(' && PRIO_SUBTRACAO >= _pilha_Op.Peek()[0])
-                        {
-                            // O que está no topo de pilha tem mais prioridade
-                            _op = _pilha_Op.Pop();
-                            for (int b = 0; b < _op[1]; b++)
-                                _posFix[_pos++] = _op[b + 2]; // Copia para posfixa
-                            _posFix[_pos++] = ' ';
-                        }
-                        _pilha_Op.Push(OP_SUBTRACAO);
+                            _op_ant = true;
+                            _op_ant_arit = true;
+                            while (_pilha_Op.Count > 0 &&
+                                _pilha_Op.Peek()[2] != '(' && PRIO_SUBTRACAO >= _pilha_Op.Peek()[0])
+                            {
+                                // O que está no topo de pilha tem mais prioridade
+                                _op = _pilha_Op.Pop();
+                                for (int b = 0; b < _op[1]; b++)
+                                    _posFix[_pos++] = _op[b + 2]; // Copia para posfixa
+                                _posFix[_pos++] = ' ';
+                            }
+                            _pilha_Op.Push(OP_SUBTRACAO);
+                        //}
                     }
                     #endregion
                 }
